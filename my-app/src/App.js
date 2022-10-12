@@ -2,6 +2,7 @@ import React from 'react';
 import { HelloWorld } from './HelloWorld';
 import { Welcome } from './Welcome'
 import { Age } from "./Age"
+import { Counter } from './Counter';
 
 
 export class App extends React.Component {
@@ -11,6 +12,7 @@ export class App extends React.Component {
             <div>
                 <HelloWorld />
                 <Welcome  />
+                <Counter />
              
 
             </div>
