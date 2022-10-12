@@ -1,5 +1,5 @@
 import React from 'react';
-import { HelloWorld } from './HelloWorld'
+import { Welcome } from './Welcome'
 
 
 export class App extends React.Component {
@@ -7,7 +7,7 @@ export class App extends React.Component {
         return (
             <div>
               
-                <HelloWorld />
+                <Welcome  name="Giuseppe"/>
            
             </div>)
     }
