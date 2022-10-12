@@ -10,7 +10,9 @@ export class Welcome extends React.Component {
         
             <div>
                 <p>Welcome, {this.props.name} !</p>
-               { Age.defaultProps.age > 18 && Age.defaultProps.age < 65 && <Age />} 
+               { Age.defaultProps.age > 18 && Age.defaultProps.age < 65 && this.props.name === "John" && <Age />} 
+
+              
              
 
             </div>
@@ -20,7 +22,7 @@ export class Welcome extends React.Component {
 
 
 Welcome.defaultProps = {
-    name: <strong>Giuseppe</strong>,
+    name: "John",
    
    
 
