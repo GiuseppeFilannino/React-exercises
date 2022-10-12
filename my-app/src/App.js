@@ -11,6 +11,7 @@ export class App extends React.Component {
             <div>
                 <HelloWorld />
                 <Welcome  />
+             
 
             </div>
         )
