@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelloWorld } from './HelloWorld';
 import { Welcome } from './Welcome'
+import { Age } from "./Age"
 
 
 export class App extends React.Component {
@@ -15,3 +16,7 @@ export class App extends React.Component {
     }
 }
 
+Age.defaultProps = {
+    age: "27"
+
+}

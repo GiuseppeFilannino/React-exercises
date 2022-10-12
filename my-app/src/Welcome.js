@@ -1,4 +1,5 @@
 import React from "react";
+import {Age} from "./Age"
 
 
 export class Welcome extends React.Component {
@@ -8,7 +9,7 @@ export class Welcome extends React.Component {
         return (
             <div>
                 <p>Welcome, {this.props.name} !</p>
-                <p>Your age is: {this.props.age}</p>
+                <Age />
 
             </div>
         )
@@ -18,6 +19,6 @@ export class Welcome extends React.Component {
 
 Welcome.defaultProps = {
     name: <strong>Giuseppe</strong>,
-    age: "27"
+   
 
 }
