@@ -9,11 +9,11 @@ export class Counter extends React.Component {
     }
 
 
-    constructor(props) {
-        super(props)
+    componentDidMount() {
 
+                // il costruttore non è più necessario
 
-        this.counter = setInterval(() => {
+        setInterval(() => {
             this.setState((state) => {
                 return {
                     count: state.count + this.props.amount,
