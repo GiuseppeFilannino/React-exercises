@@ -7,12 +7,13 @@ export class ClickTracker extends React.Component {
 
 
     handleClickTracker = (event) => {
+        const value = event.target.innerText
         // console.log(event.target.innerText)
 
 
         this.setState(() => {
             return {
-                target: this.state.target + event.target.innerText
+                target: value
             }
         })
 
