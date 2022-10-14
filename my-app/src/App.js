@@ -9,6 +9,9 @@ import { InteractiveWelcome } from './InteractiveWelcome';
 import { Login } from './Login';
 
 
+const login = (dati) => {
+console.log(dati)}
+
 export class App extends React.Component {
     render() {
         return (
@@ -20,7 +23,7 @@ export class App extends React.Component {
                 <ClickCounter /> <hr></hr>
                 <ClickTracker /> <hr></hr>
                 <InteractiveWelcome /> <hr></hr>
-                <Login /> <hr></hr>
+                <Login  onLogin = {login} /> <hr></hr>
              
 
             </div>
