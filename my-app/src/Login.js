@@ -7,20 +7,19 @@ export class Login extends React.Component {
     state = {
         username: '',
         password: '',
-        remember: '',
+        remember: false,
         loginStatus: true
 
     }
 
     handleInputChange = (event) => {
         const name = event.target.name
-        const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
-
-        // const type = event.target.type 
-        // const checked = event.target.checked
+        const value = event.target.value
+        const type = event.target.type
+        const checked = event.target.checked
 
         this.setState({
-            [name]: value,
+            [name]: type === 'checkbox' ? checked : value,
         })
 
         this.setState((state) => {
@@ -35,6 +34,15 @@ export class Login extends React.Component {
         this.props.onLogin(this.state)
     }
 
+    handleResetLogin = () => {
+        this.setState({
+            username: '',
+            password: '',
+            remember: false,
+        })
+    }
+
+
     render() {
         return (
 
@@ -43,8 +51,9 @@ export class Login extends React.Component {
 
                 <label>Insert username:</label><input name="username" value={this.state.username} onChange={this.handleInputChange}></input><br />
                 <label>Insert password:</label><input name="password" value={this.state.password} onChange={this.handleInputChange} type="password"></input><br />
-                <label>Checkbox:</label><input name ="remember" value={this.state.remember} onChange={this.handleInputChange} type="checkbox"></input><br />
+                <label>Checkbox:</label><input name="remember" checked={this.state.remember} onChange={this.handleInputChange} type="checkbox"></input><br />
                 <button name="login" type="button" onClick={this.handleLogin} disabled={this.state.loginStatus}>Login</button>
+                <button  onClick={this.handleResetLogin} >Reset</button>
 
                 {/* status = {this.state.status} */}
 
