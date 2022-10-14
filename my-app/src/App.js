@@ -5,6 +5,7 @@ import { Age } from "./Age"
 import { Counter } from './Counter';
 import { ClickCounter } from './ClickCounter';
 import { ClickTracker } from './ClickTracker';
+import { InteractiveWelcome } from './InteractiveWelcome';
 
 
 export class App extends React.Component {
@@ -17,6 +18,7 @@ export class App extends React.Component {
                 <Counter />
                 <ClickCounter />
                 <ClickTracker />
+                <InteractiveWelcome />
              
 
             </div>
