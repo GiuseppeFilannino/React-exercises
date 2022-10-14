@@ -3,6 +3,7 @@ import { HelloWorld } from './HelloWorld';
 import { Welcome } from './Welcome'
 import { Age } from "./Age"
 import { Counter } from './Counter';
+import { ClickCounter } from './ClickCounter';
 
 
 export class App extends React.Component {
@@ -13,6 +14,7 @@ export class App extends React.Component {
                 <HelloWorld />
                 <Welcome  />
                 <Counter />
+                <ClickCounter />
              
 
             </div>
