@@ -17,7 +17,7 @@ export class Counter extends React.Component {
             this.setState((state) => {
                 return {
                     count: state.count + this.props.amount,
-                    counter: state.counter + this.props.amount
+                 
 
                 }
             })
