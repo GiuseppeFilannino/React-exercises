@@ -8,6 +8,7 @@ import { ClickTracker } from './ClickTracker';
 import { InteractiveWelcome } from './InteractiveWelcome';
 import { Login } from './Login';
 import { UncontrolledLogin } from './UncontrolledLogin';
+import { TodoList } from './TodoList';
 
 
 const login = (dati) => {
@@ -25,7 +26,8 @@ export class App extends React.Component {
                 <ClickTracker /> <hr></hr>
                 <InteractiveWelcome /> <hr></hr>
                 <Login  onLogin = {login} /> <hr></hr>
-                <UncontrolledLogin />
+                <UncontrolledLogin /> <hr></hr>
+                <TodoList />
              
 
             </div>
