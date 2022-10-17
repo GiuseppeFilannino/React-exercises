@@ -70,7 +70,7 @@ export class UncontrolledLogin extends React.Component {
                 <h1>Uncontrolled Login</h1>
 
                 <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-                    <label >Insert username:</label> <input onChange={this.handleLoginButton} name="username"
+                    <label >Insert username:</label> <input autoFocus onChange={this.handleLoginButton} name="username"
                     /> <br></br>
                     <label >Insert password:</label><input onChange={this.handleLoginButton} name="password" type="password"
                     /> <br></br>
