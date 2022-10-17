@@ -23,9 +23,7 @@ export class UncontrolledLogin extends React.Component {
             remember
         })
 
-        // return {
-        //     loginStatus: !event.target.elements.username.value.trim() || !event.target.elements.password.value
-        // }
+       
 
 
 
@@ -38,6 +36,7 @@ export class UncontrolledLogin extends React.Component {
 
 
              this.setState(() => {
+              
             
                 return {
 
@@ -84,8 +83,4 @@ export class UncontrolledLogin extends React.Component {
             </div>
         )
     }
-}
-
-UncontrolledLogin.defaulProps = {
-    loginStatus: true
 }
