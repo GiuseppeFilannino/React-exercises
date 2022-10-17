@@ -29,7 +29,8 @@ export class TodoList extends React.Component {
 
         this.setState(() => {
             return {
-                items: [...this.state.items, newElement]
+                items: [...this.state.items, newElement],
+                element:''
             }
         })
       
@@ -44,7 +45,7 @@ export class TodoList extends React.Component {
         return (
             <div>
 
-                <label>Insert Element to add:</label><input onChange={this.handleGetElement}></input>
+                <label>Insert Element to add:</label><input value={this.state.element} onChange={this.handleGetElement}></input>
                 <button onClick={this.handleAddElement}>Add</button>
                 <ul>
 
