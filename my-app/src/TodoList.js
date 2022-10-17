@@ -44,6 +44,21 @@ export class TodoList extends React.Component {
         })
     }
 
+
+    handleRemoveElement = (event) => {
+        const buttonId = event.target.id
+        for (let i = 0; i < this.state.items.length; i++) {
+            if (this.state.items[i] === buttonId) {
+                this.setState(() =>
+                    this.state.items.splice(this.state.items.indexOf(buttonId), 1)
+                )
+
+            }
+        }
+
+
+    }
+
     render() {
         return (
             <div>
@@ -54,7 +69,7 @@ export class TodoList extends React.Component {
                 <ul>
 
 
-                    {this.state.items.map((item) => <li>{item}</li>)}
+                    {this.state.items.map((item) => <li>{item}<button id={item} onClick={this.handleRemoveElement}>Remove</button></li>)}
 
                 </ul>
             </div>
