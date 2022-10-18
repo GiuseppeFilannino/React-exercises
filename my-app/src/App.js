@@ -20,7 +20,7 @@ export class App extends React.Component {
     render() {
         return (
 
-            <Container>
+            <Container title={'React exercises'}>
                 <HelloWorld /> <hr></hr>
                 <Welcome /> <hr></hr>
                 <Counter /> <hr></hr>
