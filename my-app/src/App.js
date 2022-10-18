@@ -9,28 +9,30 @@ import { InteractiveWelcome } from './InteractiveWelcome';
 import { Login } from './Login';
 import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList';
+import { Container } from './Container';
 
 
 const login = (dati) => {
-console.log(dati)}
+    console.log(dati)
+}
 
 export class App extends React.Component {
     render() {
         return (
-         
-            <div>
+
+            <Container>
                 <HelloWorld /> <hr></hr>
-                <Welcome  /> <hr></hr>
+                <Welcome /> <hr></hr>
                 <Counter /> <hr></hr>
                 <ClickCounter /> <hr></hr>
                 <ClickTracker /> <hr></hr>
                 <InteractiveWelcome /> <hr></hr>
-                <Login  onLogin = {login} /> <hr></hr>
+                <Login onLogin={login} /> <hr></hr>
                 <UncontrolledLogin /> <hr></hr>
                 <TodoList />
-             
 
-            </div>
+
+            </Container>
         )
     }
 }
