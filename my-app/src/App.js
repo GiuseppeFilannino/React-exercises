@@ -29,23 +29,6 @@ export class App extends React.Component {
                 <InteractiveWelcome /> <hr></hr>
                 <Login onLogin={login} /> <hr></hr>
                 <UncontrolledLogin /> <hr></hr>
-                {/* <TodoList
-                    render={(item) => {
-                        const [...state.items,newArray] = item
-                        return (
-                            <div>
-                              
-                                <ul>
-
-
-                                    {this.state.items.map((item) => <li>{item}<button id={item} onClick={this.handleRemoveElement}>Remove</button></li>)}
-
-                                </ul>
-                            </div>
-                        )
-                    }} >
-                </TodoList> */}
-
                 <TodoList />
             </Container>
         )

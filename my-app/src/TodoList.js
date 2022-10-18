@@ -72,7 +72,7 @@ export class TodoList extends React.Component {
                     {this.state.items.map((item) => <li>{item}<button id={item} onClick={this.handleRemoveElement}>Remove</button></li>)}
 
                 </ul>
-                {/* {this.props.render(this.state.items)} */}
+               
             </div>
         )
     }
