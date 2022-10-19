@@ -16,7 +16,9 @@ export function App() {
             <Container title={'React exercises'}>
                 <Welcome /> <hr></hr>
                 <Sum  /> <hr></hr>
-                <ClickCounter /> <hr></hr>
+                <ClickCounter onCounterChange={(count) =>{
+                return console.log('The counter is now ' + count)
+                }}/> <hr></hr>
                 <Login />
             </Container >
 
