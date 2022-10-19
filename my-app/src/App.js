@@ -3,6 +3,7 @@ import { Welcome } from './Components/Welcome'
 import { Container } from './Components/Container';
 import { Sum } from './Components/Sum';
 import { ClickCounter } from './Components/ClickCounter';
+import {Login} from './Components/Login'
 
 
 
@@ -16,6 +17,7 @@ export function App() {
                 <Welcome /> <hr></hr>
                 <Sum  /> <hr></hr>
                 <ClickCounter /> <hr></hr>
+                <Login />
             </Container >
 
 

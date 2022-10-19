@@ -1,73 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 
-export class Login extends React.Component {
+export function Login() {
 
-    state = {
+    const [data, setData] = useState({
         username: '',
         password: '',
         remember: false,
-        loginStatus: true
 
-    }
 
-    handleInputChange = (event) => {
-        const name = event.target.name
-        const value = event.target.value
-        const type = event.target.type
-        const checked = event.target.checked
+    })
 
-        this.setState({
-            [name]: type === 'checkbox' ? checked : value,
-        })
+    function handleInputChange(event) {
+        const { name, type, value, checked } = event.target
 
-        this.setState((state) => {
-
+        setData(data => {
             return {
-                loginStatus: !state.username.trim() || !state.password
+                ...data,
+
+                [name]: type === 'checkbox' ? checked : value
             }
         })
+
+
     }
 
-    handleLogin = () => {
-        this.props.onLogin(this.state)
-    }
 
-    handleResetLogin = () => {
-        this.setState({
+
+    function handleResetLogin() {
+
+        setData({
             username: '',
             password: '',
             remember: false,
+            loginStatus: true
+
+        })
+    }
+
+    function handleLogin() {
+        console.log(data)
+        setData({
+            username: '',
+            password: '',
+            remember: false,
+            loginStatus: true
+
         })
     }
 
 
-    render() {
-
-        const loginStyle = {
-            backgroundColor: this.state.password.length < 8 ? 'green' : 'red',
-        }
-        return (
 
 
-            <div>
 
-                <label>Insert username:</label><input name="username" value={this.state.username} onChange={this.handleInputChange}></input><br />
-                <label>Insert password:</label><input name="password" value={this.state.password} onChange={this.handleInputChange} type="password"></input><br />
-                <label>Checkbox:</label><input name="remember" checked={this.state.remember} onChange={this.handleInputChange} type="checkbox"></input><br />
-                <button style={loginStyle} name="login" type="button" onClick={this.handleLogin} disabled={this.state.loginStatus}>Login</button>
-                <button onClick={this.handleResetLogin} >Reset</button>
-
-                {/* status = {this.state.status} */}
+    return (
 
 
-            </div>
-        )
-    }
+        <div>
+
+            <label>Insert username:</label><input name="username" value={data.username} onChange={handleInputChange}></input><br />
+            <label>Insert password:</label><input name="password" value={data.password} onChange={handleInputChange} type="password"></input><br />
+            <label>Checkbox:</label><input name="remember" checked={data.remember} onChange={handleInputChange} type="checkbox"></input><br />
+            <button name="login" type="button" onClick={handleLogin} disabled={!data.username || !data.password}>Login</button>
+            <button onClick={handleResetLogin} >Reset</button>
+        </div>
+    )
 }
 
-Login.defaultPros = {
 
-    onLogin: () => console.error('error')
-}
