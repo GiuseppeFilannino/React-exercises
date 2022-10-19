@@ -13,7 +13,7 @@ export function App() {
         <div>
             <Container title={'React exercises'}>
                 <Welcome /> <hr></hr>
-                <Sum numbers={[2, 4, 6, 8, 9, 32]} />
+                <Sum  />
             </Container >
 
 

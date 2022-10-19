@@ -1,6 +1,4 @@
-export function Sum(props) {
-
-    const numbers = props.numbers
+export function Sum({ numbers = [2, 4, 6, 8, 9, 21] }) {
 
     const result = numbers.reduce((previous, next) => {
         return previous + next
