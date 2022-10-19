@@ -1,5 +1,4 @@
 import React from "react";
-import {Age} from "./Age"
 
 
 export function Welcome({name = 'Jhon'}) {
@@ -10,7 +9,7 @@ export function Welcome({name = 'Jhon'}) {
         
             <div className="welcome">
                 <p>Welcome, {name} !</p>
-                <Age />
+           
 
               
              
