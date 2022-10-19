@@ -4,6 +4,8 @@ import { Container } from './Components/Container';
 import { Sum } from './Components/Sum';
 import { ClickCounter } from './Components/ClickCounter';
 import {Login} from './Components/Login'
+import { Counter } from './Components/Counter';
+
 
 
 
@@ -20,6 +22,7 @@ export function App() {
                 return console.log('The counter is now ' + count)
                 }}/> <hr></hr>
                 <Login />
+                <Counter initialValue={0}/>
             </Container >
 
 
