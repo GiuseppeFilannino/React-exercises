@@ -59,6 +59,7 @@ export class App extends React.Component {
                 <select value={this.state.language} onChange={this.handleLanguageChange}>
                     <option value='en'>ENGLISH</option>
                     <option value='it'>ITALIANO</option>
+                    <option value='fr'>FRANCESE</option>
                 </select>
                 <LanguageContext.Provider value={this.state.language}>
                     <DisplayLanguage />
