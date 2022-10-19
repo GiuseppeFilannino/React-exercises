@@ -1,17 +1,17 @@
 import React from 'react';
-import { HelloWorld } from './HelloWorld';
-import { Welcome } from './Welcome'
-import { Age } from "./Age"
-import { Counter } from './Counter';
-import { ClickCounter } from './ClickCounter';
-import { ClickTracker } from './ClickTracker';
-import { InteractiveWelcome } from './InteractiveWelcome';
-import { Login } from './Login';
-import { UncontrolledLogin } from './UncontrolledLogin';
-import { TodoList } from './TodoList';
-import { Container } from './Container';
-import { LanguageContext } from './LanguageContext';
-import {DisplayLanguage} from './DisplayLanguage'
+import { HelloWorld } from './Components/HelloWorld';
+import { Welcome } from './Components/Welcome'
+import { Age } from "./Components/Age"
+import { Counter } from './Components/Counter';
+import { ClickCounter } from './Components/ClickCounter';
+import { ClickTracker } from './Components/ClickTracker';
+import { InteractiveWelcome } from './Components/InteractiveWelcome';
+import { Login } from './Components/Login';
+import { UncontrolledLogin } from './Components/UncontrolledLogin';
+import { TodoList } from './Components/TodoList';
+import { Container } from './Components/Container';
+import { LanguageContext } from './Components/LanguageContext';
+import {DisplayLanguage} from './Components/DisplayLanguage'
 
 
 const login = (dati) => {
