@@ -44,6 +44,6 @@ export function GitHubUser({ username }) {
        
         {loading && <h1>Loading...</h1>}
         {error && <h1>There has been an error</h1>}
-        {data && <h1>{data.name}</h1>}
+        {data && <h1>The user's name is: {data.name}</h1>}
     </div>
 }

@@ -7,6 +7,7 @@ import {Login} from './Components/Login'
 import { Counter } from './Components/Counter';
 import { GitHubUser } from './Components/GitHubUser';
 import { GitHubUserList } from './Components/GitHubUserList';
+import { HookCounter } from './Components/HookCounter';
 
 
 
@@ -27,6 +28,7 @@ export function App() {
                 <Counter initialValue={0}/>
                 <GitHubUser username={'GiuseppeFilannino'}/>
                 <GitHubUserList />
+                <HookCounter />
 
             </Container >
 
