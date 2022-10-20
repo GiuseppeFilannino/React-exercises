@@ -6,6 +6,7 @@ import { ClickCounter } from './Components/ClickCounter';
 import {Login} from './Components/Login'
 import { Counter } from './Components/Counter';
 import { GitHubUser } from './Components/GitHubUser';
+import { GitHubUserList } from './Components/GitHubUserList';
 
 
 
@@ -25,6 +26,7 @@ export function App() {
                 <Login />
                 <Counter initialValue={0}/>
                 <GitHubUser username={'GiuseppeFilannino'}/>
+                <GitHubUserList />
 
             </Container >
 
