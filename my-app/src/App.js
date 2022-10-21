@@ -9,6 +9,7 @@ import { GitHubUser } from './Components/GitHubUser';
 import { GitHubUserList } from './Components/GitHubUserList';
 import { HookCounter } from './Components/HookCounter';
 import { CarDetails } from './Components/CarDetails';
+import { FilteredList } from './Components/FilteredList';
 
 
 
@@ -29,6 +30,7 @@ export function App() {
                 <GitHubUserList />
                 <HookCounter />
                 {/* <CarDetails /> */}
+                <FilteredList />
             
 
             </Container >
