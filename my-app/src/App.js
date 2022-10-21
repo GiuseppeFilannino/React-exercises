@@ -10,8 +10,8 @@ import { Login } from './Login';
 import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList';
 import { Container } from './Container';
-import { LanguageContext } from './LanguageContext';
-import {DisplayLanguage} from './DisplayLanguage'
+import { LanguageComponent} from './LanguageContext';
+
 
 
 const login = (dati) => {
@@ -56,13 +56,7 @@ export class App extends React.Component {
                 </Container >
                 <h2>Context</h2>
 
-                <select value={this.state.language} onChange={this.handleLanguageChange}>
-                    <option value='en'>ENGLISH</option>
-                    <option value='it'>ITALIANO</option>
-                </select>
-                <LanguageContext.Provider value={this.state.language}>
-                    <DisplayLanguage />
-                </LanguageContext.Provider>
+                <LanguageComponent />
             </div>
         )
     }
