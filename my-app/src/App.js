@@ -8,6 +8,7 @@ import { Counter } from './Components/Counter';
 import { GitHubUser } from './Components/GitHubUser';
 import { GitHubUserList } from './Components/GitHubUserList';
 import { HookCounter } from './Components/HookCounter';
+import { CarDetails } from './Components/CarDetails';
 
 
 
@@ -24,11 +25,12 @@ export function App() {
                 <ClickCounter onCounterChange={(count) =>{
                 return console.log('The counter is now ' + count)
                 }}/> <hr></hr>
-                <Login />
-                <Counter initialValue={0}/>
-                <GitHubUser username={'GiuseppeFilannino'}/>
-                <GitHubUserList />
-                <HookCounter />
+                <Login /> <hr></hr>
+                <Counter initialValue={0}/> <hr></hr>
+                <GitHubUser username={'GiuseppeFilannino'}/> <hr></hr>
+                <GitHubUserList /> <hr></hr>
+                <HookCounter /> <hr></hr>
+                <CarDetails  /> <hr></hr>
 
             </Container >
 
