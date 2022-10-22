@@ -1,50 +1,62 @@
-import { useEffect, useRef } from 'react'
+import { useRef, useState } from "react"
 
-export function CarDetails({ model = 'Fiat', year = '2010', color = 'red' }) {
-
-    const inputRef = useRef()
-
-    function handleFormSubmit(event) {
+export function CarDetails() {
+    const formEl = useRef()
+    // const [Car, setCar] = useState([])
 
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        // const formInputs = [...formEl.current.elements]
+       
+   
+        // const newSubmitted = formInputs.reduce(
+        //     (car, input) => {
+        //         return {
+        //             ...car,
+        //             [input.name]: input.value
 
-        event.preventDefault()
+        //         };
+        //     },
 
-        const model = event.target.elements.model.value
-        const year = event.target.elements.year.value
-        const color = event.target.elements.color.value
+        // );
+        // console.log(Car)
+        // setCar(prevSubmitted => [...prevSubmitted, newSubmitted])
 
+        const model= event.target.elements.model.value
+        const year= event.target.elements.year.value
+        const color= event.target.elements.color.value
+
+        console.log({
+        model,year,color})
 
 
 
 
     }
-    useEffect(() => {
-        console.log({ model, year, color })
-    }, [])
 
-
-
-
-
-
-
-
-
-
-    function handleInputChange() {
-        
-    }
 
     return (
         <div>
-            <h2>Car Form </h2>
-            <form ref={inputRef} onSubmit={handleFormSubmit}>
-                <label>Insert model of the car:</label><input onChange={handleInputChange} value={model}></input><br></br>
-                <label>Insert year of the car:</label><input value={year}></input><br></br>
-                <label>Insert color of the car:</label><input value={color}></input><br></br>
+            <form ref={formEl} onSubmit={handleSubmit}>
+                <label>Insert the model of the car:</label><input placeholder="Panda" name="model" ></input><br></br>
+                <label>Insert the year of the car:</label><input placeholder="2016" name="year" ></input><br></br>
+                <label>Insert the color of the car:</label><input placeholder="Red" name="color"></input><br></br>
+
+                <button type="submit">Submit</button>
             </form>
-            <button type="submit">Submit</button>
-        </div>
+            <h3>Submitted values</h3>
+            <ul>
+                {/* {Car.map((input, index) => (<li key={index}>
+                    <ul>
+                        <li>model: {input.value}</li>
+                        <li>year: {input.year}</li>
+                        <li>car: {input.color}</li>
+                    </ul>
+                </li> */}
+                {/* ))} */}
+            </ul>
+        </div >
+
     )
 }
