@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Welcome({name = 'Jhon'}) {
+export function Welcome({name}) {
 
 
   
