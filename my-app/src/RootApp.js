@@ -13,9 +13,10 @@ export function RootApp() {
 
             <Route path='/' element={<Welcome name='Jimmy' />} />
             <Route path='counter' element={<Counter initialValue={0} />} />
-            <Route path='users/:username' element={<ShowGitHubUser username={'GiuseppeFilannino'} />} >
+            <Route path='users/:username' element={<ShowGitHubUser username={'GiuseppeFilannino'} />} />
+            <Route path='*' element={<div><p>Not Found</p> <Link to="/" >Go Home</Link></div>} />
          
-            </Route>
+        
 
 
         </Routes>
