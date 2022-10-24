@@ -1,25 +1,32 @@
-import { Routes, Route,Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { Counter } from './Components/Counter';
 import { Welcome } from './Components/Welcome';
 import { ShowGitHubUser } from './Components/ShowGitHubUser';
+import { GitHubUser } from './Components/GitHubUser';
+import { GitHubUserList } from './Components/GitHubUserList';
+import { Message } from './Components/Message';
 
 export function RootApp() {
     return (
         <div>
             <div>
-                <Link to='/'>Home</Link> ! <Link to='/counter'>ShowCounter</Link> | <Link to='/users/:username'>Show my GitHub name</Link>
+                <Link to='/'>Home</Link> ! <Link to='counter'>ShowCounter</Link> | <Link to='users'>Show my GitHub name</Link>
             </div>
-        <Routes >
+            <Routes >
 
-            <Route path='/' element={<Welcome name='Jimmy' />} />
-            <Route path='counter' element={<Counter initialValue={0} />} />
-            <Route path='users/:username' element={<ShowGitHubUser username={'GiuseppeFilannino'} />} />
-            <Route path='*' element={<div><p>Not Found</p> <Link to="/" >Go Home</Link></div>} />
-         
-        
+                <Route path='/' element={<Welcome name='Jimmy' />} />
+                <Route path='counter' element={<Counter initialValue={0} />} />
+                <Route path='users' element={<ShowGitHubUser  />} >
+                    <Route index element={<p>GitHubList</p>} />
+                    <Route path='list' element={<Message />} />
+                </Route>
+                <Route  path='message' element={<Message />}></Route>
+                <Route path='*' element={<div><p>Not Found</p> <Link to="/" >Go Home</Link></div>} />
 
 
-        </Routes>
+
+
+            </Routes>
         </div>
     )
 }

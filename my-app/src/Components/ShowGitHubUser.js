@@ -1,11 +1,12 @@
-import{useParams} from "react-router-dom"
+import{useParams,Link} from "react-router-dom"
 import { GitHubUser } from "./GitHubUser"
 
-export function ShowGitHubUser({username}){
-// const {username} = useParams()
+export function ShowGitHubUser(){
+const {username = 'GiuseppeFilannino'} = useParams()
 return(
     <div>
-        <h1><GitHubUser username={username} /> </h1>
+        <Link to='list'>Users List</Link>
+        {/* <h1><GitHubUser username={username} /> </h1> */}
     </div>
     )
 }
