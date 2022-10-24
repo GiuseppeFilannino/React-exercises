@@ -5,7 +5,7 @@ export function ClickCounter(props, { initialValue = 0 }) {
 
     useEffect(() => {
         props.onCounterChange(count)
-    })
+    },[count,props])
 
     function handleIncrementCounter() {
         setCount((c) => c + 1)
@@ -17,7 +17,7 @@ export function ClickCounter(props, { initialValue = 0 }) {
 
     return (
         <div >
-            <h1> Counter :{count}</h1>
+            <h1> Counter : {count}</h1>
             <button onClick={handleIncrementCounter}>IncrementCounter </button>
 
         </div>
