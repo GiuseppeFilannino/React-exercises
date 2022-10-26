@@ -35,7 +35,7 @@ export function GitHubUserList() {
             })} */}
             {/* </ul> */}
 
-            <Link to="user">Show GitHub user</Link>
+            <Link to="username">Show GitHub user</Link>
             <Outlet />
 
         </div >

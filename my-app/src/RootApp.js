@@ -16,17 +16,20 @@ export function RootApp() {
 
                 <Route path='/' element={<Welcome name='Jimmy' />} />
                 <Route path='counter' element={<Counter initialValue={0} />} />
-                <Route path='users' element={<ShowGitHubUser  />} >
-                    <Route index element={<p>GitHubList</p>} />
-                    <Route path='list' element={<Message />} />
+                <Route path='users' element={<GitHubUserList  />} >
+
+                    {/* <Route index element={<p></p>} /> */}
+                    <Route path=':username' element={<ShowGitHubUser />} />
                 </Route>
                 <Route  path='message' element={<Message />}></Route>
                 <Route path='*' element={<div><p>Not Found</p> <Link to="/" >Go Home</Link></div>} />
+                
 
 
 
 
             </Routes>
+            <GitHubUser username='GiuseppeFilannino' />
         </div>
     )
 }
