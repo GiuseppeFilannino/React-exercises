@@ -28,14 +28,20 @@ export function GitHubUserList() {
         <div>
             <label>Insert the GitHubUser to show is name : </label><input name='user' value={user} onChange={handleGetUser}></input>
             <button onClick={handleAddUser}>Add</button>
-            {/* <ul>{userList.map((user, index) => {
-                return (
-                    <li><GitHubUser key={index} username={user} /></li>
-                )
-            })} */}
-            {/* </ul> */}
+            <div>
+                {userList.map((user, index) => (
 
-            <Link to="username">Show GitHub user</Link>
+                    <div >
+                        <Link key={index} to={user} > {user} </Link>
+                        <Outlet />
+                    </div>
+
+                ))}
+            </div>
+
+
+
+
             <Outlet />
 
         </div >
