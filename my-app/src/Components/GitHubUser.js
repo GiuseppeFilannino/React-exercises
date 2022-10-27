@@ -3,12 +3,7 @@ import { useGitHubUser } from "./useGitHubUser"
 
 
 export function GitHubUser({ username }) {
-    const { data, error, loading, onFetchUser } = useGitHubUser(username)
-
-    useEffect(() => {
-        onFetchUser(username)
-
-    }, [username])
+    const { data, error, loading } = useGitHubUser(username)
 
 
 
