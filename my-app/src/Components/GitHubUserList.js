@@ -14,7 +14,6 @@ export function GitHubUserList() {
 
     function handleAddUser() {
         setUserList([...userList, user])
-        setUser('')
 
     }
 

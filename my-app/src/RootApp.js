@@ -17,6 +17,7 @@ export function RootApp() {
                 <Route path='/' element={<Welcome name='Jimmy' />} />
                 <Route path='counter' element={<Counter initialValue={0} />} />
                 <Route path='users' element={<GitHubUserList  />} >
+                    <Route index element={<h2>Add a username and select it</h2>}/>
                     <Route path=':username' element={<ShowGitHubUser />} />
                 </Route>
                 <Route  path='message' element={<Message />}></Route>
