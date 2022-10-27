@@ -1,5 +1,5 @@
 import { useState } from "react"
-import useSWR from "swr"
+import useSWR, { mutate } from "swr"
 
 const fetcher = (url) => fetch(url).then((response) => response.json())
 
@@ -8,7 +8,9 @@ export function useGitHubUser(username) {
 
     const { data, error } = useSWR(username ? `https://api.github.com/users/${username}` : null, fetcher)
 
-
+    function refetchData() {
+        mutate()
+    }
 
 
 
@@ -17,6 +19,7 @@ export function useGitHubUser(username) {
         data,
         error,
         loading: !data && !error,
+        refetchData
 
     }
 }
